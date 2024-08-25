@@ -1,5 +1,6 @@
 import express, {Application} from "express";
 import cors from "cors";
+import categoryRoutes from "./routes/category.routes";
 
 export class App {
     private readonly app: Application;
@@ -23,7 +24,7 @@ export class App {
 
     private routes() {
         const start = "/api";
-        //this.app.use(start + "/auth", authRoutes);
+        this.app.use(start + "/category", categoryRoutes);
     }
 
     public getServer() {
