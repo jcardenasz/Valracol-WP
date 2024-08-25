@@ -6,7 +6,7 @@ const client = new Client({
     host: Config.HOSTDB,
     database: Config.DATABASE,
     password: Config.PASSWORD,
-    port: Config.PORT,
+    port: Config.DB_PORT,
 });
     client.connect()
         .then(() => console.log('Connected to PostgreSQL database: '+Config.DATABASE))
