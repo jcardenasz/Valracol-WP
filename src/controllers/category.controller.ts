@@ -19,4 +19,8 @@ class CategoryController {
         return categoryFacade.updateCategory(req, res);
     }
 
+    public async deleteCategory (req: Request, res: Response):  Promise <Response> {
+        return categoryFacade.deleteCategory(req, res);
+    }
+
 } export default new CategoryController();
