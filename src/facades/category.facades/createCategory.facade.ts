@@ -1,4 +1,3 @@
-// src/facades/category.facades/createCategory.facade.ts
 import { Request, Response } from 'express';
 import db from '../../database';
 
