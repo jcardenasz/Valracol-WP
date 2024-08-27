@@ -12,7 +12,7 @@ export const createCategoryFacade = async (req: Request, res: Response): Promise
             .returningAll()
             .execute();
 
-        return res.status(201).json({newCategory, message: `Category:${name} successfully`});
+        return res.status(201).json({newCategory, message: `Category:${name} created successfully`});
     } catch (error) {
         return res.status(500).json({ error: (error as Error).message, message: `Failed to create category: ${name}` });
     }
