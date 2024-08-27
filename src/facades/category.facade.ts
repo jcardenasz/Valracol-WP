@@ -3,6 +3,7 @@ import {getAllCategoriesFacade} from "./category.facades/getAllCategories.facade
 import {getCategoryFacade} from "./category.facades/getCategory.facade";
 import {createCategoryFacade} from "./category.facades/createCategory.facade";
 import {updateCategoryFacade} from "./category.facades/updateCategory.facade";
+import {deleteCategoryFacade} from "./category.facades/deleteCategory.facade";
 
 class CategoryFacade {
 
@@ -20,6 +21,10 @@ class CategoryFacade {
 
     public async updateCategory(req: Request, res: Response): Promise<Response> {
         return updateCategoryFacade(req,res);
+    }
+
+    public async deleteCategory(req: Request, res: Response): Promise<Response> {
+        return deleteCategoryFacade(req,res);
     }
 }
 
