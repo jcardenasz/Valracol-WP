@@ -1,6 +1,7 @@
 import express, {Application} from "express";
 import cors from "cors";
 import categoryRoutes from "./routes/category.routes";
+import productRoutes from "./routes/product.routes";
 
 export class App {
     private readonly app: Application;
@@ -25,6 +26,7 @@ export class App {
     private routes() {
         const start = "/api";
         this.app.use(start + "/category", categoryRoutes);
+        this.app.use(start + "/product", productRoutes);
     }
 
     public getServer() {
